@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var obj = {
+            name: "pink你好",
+            age: 18,
+            sex: "男",
+            fn: function () {
+                console.log("nihao");
+            }
+        }
+        for (
+            var k in obj
+        ) {
+            // k 变量 输出 得到的是 属性名
+            console.log(k);
+            // obj[k] 得到的是 属性值
+            console.log(obj[k]);
+        }
+        // 我们使用 for in 里面的变量 我们喜欢写 k 或者是key
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

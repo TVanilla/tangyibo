@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 我写的程序
+        // var consult = prompt("请你输入一个数字")
+        // var t = parseFloat(consult);
+        // function getRandom(min, max) {
+        //     return Math.floor(Math.random() * (max - min + 1)) + min;
+        // }
+        // var random = getRandom(1, 10);
+        // if (t > random) {
+        //     alert("数字大了，继续猜");
+        // } else if (t < random) {
+        //     alert("数字小了,继续猜");
+        // } else if (t = random) {
+        //     alert("猜对了,结束程序");
+        // }
+        // 老师写的程序
+        // 案例分析
+        // 1.随机生成  1~10之间的整数  我们需要用到Math.random()方法
+        // 2.需要一直猜到正确为止,所以需要一组来循环
+        // 3.while 循环更简单
+        // 4.核心算法 :使用if else if 多分支语句来判断 大于,小于,等于.
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var random = getRandom(1, 10);
+        while (true) {
+            var num = prompt("你来猜?输入1~10之间的一个数字");
+            if (num > random) {
+                alert("你猜大了");
+            } else if (num < random) {
+                alert("你猜小");
+            }
+            else {
+                alert("你好帅哦,猜对了");
+                break;//退出整个循环
+            }
+        }
+
+
+
+        //  要求用户猜  1~50之间的一个数字  但是只有 10次猜的机会
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var random = getRandom(1, 20);
+        for (var i = 1; i <= 10; i++) {
+            var num = prompt("你可以在1~50之间猜数,你共有10次机会");
+
+
+            if (i == 10) {
+                alert("你已经没有机会了");
+            }
+            if (
+                num > random
+            ) {
+                alert("你猜大了");
+            } else if (num == "" || num == null) {
+                alert("你没有输入")
+            } else if (num < random) {
+                alert("你猜小了");
+            } else {
+                alert("你猜对了,去哦那恭喜你");
+                break;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
