@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            /* 让文字不自动换行，无论css宽度设置多少，所有文字都在一行内显示。 */
+            white-space: nowrap;
+            /* cursor 网页浏览时用户鼠标指针的样式或图形形状 */
+            /* pointer 光标为一只手 crosshair光标为十字线  */
+            cursor: pointer;
+            /* css控制页面文字不能被选中 */
+            user-select: none;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn:hover,
+        .btn:focus {
+            color: #333;
+            background-color: #e6e6e6;
+            border-color: #8c8c8c;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 方法1 -->
+    <button class="btn"> warning</button>
+    <!-- 方法2 inline-block文字基线对齐法 -->
+
+</body>
+
+</html>
