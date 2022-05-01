@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    .box {
+        width: 250px;
+        margin: 100px auto;
+    }
+
+    .box li {
+        float: left;
+        width: 24px;
+        height: 24px;
+        background-color: pink;
+        margin: 15px;
+        background: url(./sprite.png) no-repeat;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script>
+        // 案例分析
+        // 1.首先使用精灵图排列有规律
+        // 核心思路:利用for循环 修改精灵图的 背景位置background-position
+        // 3.剩下的是考验数学功底了
+        // 4.让循环里面的i索引号*44就是每个图片的y坐标
+        var lis = document.querySelectorAll("li");
+        for (var i = 0; i < lis.length; i++) {
+            // 让索引号 乘以44 就是每个li的背景y坐标 index就是我们的y坐标
+            var index = i * 44;
+            lis[i].style.backgroundPosition = "0 -" + index + "px";
+        } 
+    </script>
+</body>
+
+</html>
